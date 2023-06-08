@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css?family=Teko:300,regular,500,600,700);@import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
+:root{
+    --fuente-principal:'Teko';
+    --fuente-cursiva:'Dancing Script';
+    --gris-600:#2f2e2e;
+    --gris-200:#706d6d;
+}
+
+/* GENERALES */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--gris-600);
+}
+
+a{
+    text-decoration: none;
+
+}
+
+h1, h2{
+    font-family: var(--fuente-principal);
+}
+
+h3{
+    font-family: var(--fuente-cursiva);
+}
+
+/* BTN */
+.btn{
+    background: transparent;
+    width: 130px;
+    height: 42px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+}
+.btn.light{
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn.dark{
+    border: 2px solid var(--gris-600);
+    color: var(--gris-600);
+
+}
+.btn:hover{
+    background: var(--gris-600);
+    border: 2px solid var(--gris-600);
+    color: #fff
+
+}
+
+
+/* TEXT-CONTENT */
+.text-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/*TEXT-CONTENT FULL */
+.text-content.full{
+    grid-column: span 12;
+}
+.text-content.full h1,
+.text-content.full h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+.text-content.full h1{
+    font-size: 115px;
+    letter-spacing: 20px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-content.text-content.full h2{
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    line-height: 0.1;
+}
+
+/* Lateral */
+.text-content.lateral{
+    padding: 0 50px;
+
+
+}
+.text-content.lateral h1{
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-align: center;
+
+}
+
+.text-content.lateral h3{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-content.text-content.lateral p {
+    margin: 20px 0;
+    font-size: 26px;
+    text-align: center;
+    letter-spacing:0.5px;
+}
+
+/* GRILLA */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    height: 100%;
+}
+
+.container-center{
+    width: 85%;
+    margin:  0 auto;
+}
+
+.span-6{
+    grid-column: span 6;
+}
+
+/* SECTIONS */
+section{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+section.full::before{
+    content: '';
+   top:0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   /* background: url(img/image3.webp); */
+   background-attachment: fixed!important;
+   background-position: center!important;
+}
+
+/* NAV BAR */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   height: 50px;
+    background: rgba(249, 219, 121, 0.745);
+    z-index: 3;
+
+}
+
+nav .grid{
+    justify-items: start;
+    align-items: center;
+    
+}
+nav .enlaces{
+    grid-column: span 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .enlaces a {
+    margin-right: 20px;
+    font-family: var(--fuente-principal);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .5s;
+}
+
+nav .enlaces a:hover{
+    color: var(--gris-200);
+}
+
+.sociales{
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.sociales a{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+/* HEADER */
+
+header{
+    position: relative;
+    width: 100%;
+    height:calc(100vh + 50px);
+    background: #f9dd79;
+    
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(img/image1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header .grid{
+    justify-items: center;
+    align-items: center;
+}
+
+header .text-content{
+    padding: 200px 0 0 0;
+
+}
+
+
+header .text-content h3{
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+}
+
+    /* Sabores */
+
+.sabores div.background{
+    background: url(img/image2.webp);
+}
+
+.background{
+    background-size: cover!important;
+    background-position: right!important;
+    /* background-repeat: no-repeat !important; */
+
+}
+
+
+
+
+
+/* especial */
+.especial{
+    background: #b5e8d5;
+}
+.especial::before{
+    background: url(img/image3.webp);
+}
+
+
+/* Lugar */
+.lugar .background{
+    background: url(img/image4.webp);
+
+}
+
+/* Eventos */
+.eventos{
+    background: #ffbfd3;
+
+}
+.eventos::before{
+    background: url(img/image5.webp);
+}
+
+.eventos .btn{
+    width: 200px;
+}
+
+/* Postres */
+.postres .background{
+    background: url(img/image6.webp);
+}
+
+/* Helados */
+.helados{ 
+    height: 115vh;
+    background: url(img/image7.webp), #b5e8d5;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    object-fit: contain!important;
+    background-size: cover;
+}
+.helados img{
+    width: 100%;
+}
