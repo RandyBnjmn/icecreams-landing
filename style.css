@@ -15,6 +15,17 @@
     font-family: Arial, Helvetica, sans-serif;
     color: var(--gris-600);
 }
+html{
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+
+}
+body::-webkit-scrollbar-thumb{
+    background: #f9dd79;
+    border-radius: 5px;
+}
 
 a{
     text-decoration: none;
@@ -313,5 +324,6 @@ header .text-content h3{
     background-size: cover;
 }
 .helados img{
-    width: 100%;
+    width: 100%; 
 }
+
